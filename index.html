@@ -14,7 +14,7 @@
   <div class="row">
     <div class="medium-5 medium-centered columns title">
       <h1 class="spotify">Spotify Preview</h1>
-      <input type="text" name="song" id="search-music">
+      <input type="text" name="song" id="search-music" placeholder="Busca un artista o una canción">
 
       <div class="view"></div>
     </div>
@@ -25,15 +25,15 @@
       {{#each items}}
       <div class="row">
         <div class="medium-10 columns">
-          <div class="row">
+          <div class="row song">
             <div class="medium-5 columns">
 
             <img src="{{this.album.images.0.url}}" alt="thumb" class="image">
             </div>
             <div class="medium-7 columns">
-              <p>{{this.name}}</p>
+              <p class="artist lead">{{this.name}}</p>
 
-              <p>{{this.artists.0.name}}</p>
+              <p class="music">{{this.artists.0.name}}</p>
               <audio controls><source src="{{this.preview_url}}" type="audio/mpeg"></audio>
 
           </div>
